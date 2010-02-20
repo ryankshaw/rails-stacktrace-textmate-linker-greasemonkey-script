@@ -8,8 +8,9 @@
 //
 // --------------------------------------------------------------------
 //
-// This is a Greasemonkey user script.  To install it, you need
-// Greasemonkey 0.3 or later: http://greasemonkey.mozdev.org/
+// This is a Greasemonkey user script.
+//
+// To install, you need Greasemonkey: https://addons.mozilla.org/en-US/firefox/addon/748
 // Then restart Firefox and revisit this script.
 // Under Tools, there will be a new menu item to "Install User Script".
 // Accept the default configuration and install.
@@ -20,11 +21,12 @@
 // --------------------------------------------------------------------
 //
 // ==UserScript==
-// @name          Hello World
-// @namespace     http://diveintomark.org/projects/greasemonkey/
-// @description   example script to alert "Hello world!" on every page
-// @include       http://localhost:3000/*
+// @name          Rails Stacktrace TextMate Linker
+// @namespace     http://diveintogreasemonkey.org/download/
+// @description   make your stack trace lines open in TextMate
+// @include       http://localhost*
 // ==/UserScript==
+
 
 if (nodes = document.querySelectorAll("#traces code")) {
   for (var i=0, node; node = nodes[i++];) {
