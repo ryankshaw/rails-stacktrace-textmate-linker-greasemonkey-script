@@ -23,7 +23,7 @@
 // @name          Hello World
 // @namespace     http://diveintomark.org/projects/greasemonkey/
 // @description   example script to alert "Hello world!" on every page
-// @include       http://localhost*
+// @include       http://localhost:3000/*
 // ==/UserScript==
 
 if (nodes = document.querySelectorAll("#traces code")) {
