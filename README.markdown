@@ -5,7 +5,7 @@ I wrote this because I wanted a quicker way of getting from a rails error page i
 
 It works in both Firefox and Chrome, but if you want it to work in firefox you need to have [greasemonkey](http://addons.mozilla.org/en-US/firefox/addon/748) installed first.
 
-To install it, just [click here](http://github.com/ryankshaw/rails-stacktrace-textmate-linker-greasemonkey-script/blob/master/rails-stacktrace-linker.user.js)
+To install it, just [click here](http://github.com/ryankshaw/rails-stacktrace-textmate-linker-greasemonkey-script/tree/master/rails-stacktrace-linker.user.js)
 
 Note
 ----
