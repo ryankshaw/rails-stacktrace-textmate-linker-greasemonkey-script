@@ -20,7 +20,11 @@ If you want to get it work on things other than textmate
 --------------------------------------------------------
 
 take a look at some of these:
+
 http://www.gauda.de/ruby-on-rails/use-rails-footnotes-to-open-files-in-netbeans-from-firefox/
+
 http://josevalim.blogspot.com/2008/06/textmate-protocol-behavior-on-any.html
+
 http://ruy.ca/2007/04/01/handling-txmt-urls-in-windows
+
 http://www.jetbrains.net/devnet/message/5239980
