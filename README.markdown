@@ -14,3 +14,13 @@ When I was scratching my itch I found [Rails Footnotes](http://github.com/joseva
 I did not like that route because I didn't want to add any more dependencies or bloat to my already big rails app, and I figure it would be just a burden
 to all my coworkers that don't use textmate. Rails Footnotes does some other cool stuff but I actually didn't want that either, I use Rack::Bug for that.
 I guess another side effect is that it will work for any rails app I am working on, not just the ones I have installed the plugin in.
+
+
+If you want to get it work on things other than textmate
+--------------------------------------------------------
+
+take a look at some of these:
+http://www.gauda.de/ruby-on-rails/use-rails-footnotes-to-open-files-in-netbeans-from-firefox/
+http://josevalim.blogspot.com/2008/06/textmate-protocol-behavior-on-any.html
+http://ruy.ca/2007/04/01/handling-txmt-urls-in-windows
+http://www.jetbrains.net/devnet/message/5239980
