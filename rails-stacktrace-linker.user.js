@@ -24,11 +24,9 @@
 // @name          Rails Stacktrace TextMate Linker
 // @namespace     http://diveintogreasemonkey.org/download/
 // @description   make your stack trace lines open in TextMate
-// @include       http://localhost*
 // ==/UserScript==
 
-
-if (nodes = document.querySelectorAll("#traces code")) {
+if (nodes = document.getElementById("traces") && document.querySelectorAll("#traces pre>code")) {
   for (var i=0, node; node = nodes[i++];) {
     var newHtml = [],
         lines = node.innerHTML.split(/\n/);
@@ -39,6 +37,16 @@ if (nodes = document.querySelectorAll("#traces code")) {
       newHtml.push("<a href='txmt://open?url=file://", pathAndLine[0], "&amp;line=", pathAndLine[1], "&amp;column=1'>", line, "</a>\n");
     }
     node.innerHTML = newHtml.join("");
+  }
+}
+// this makes it work with rack_bug
+if (nodes = document.getElementById("rack_bug") && document.querySelectorAll("#rack_bug table>tbody>tr>td[colspan='3'] li")) {
+  for (var i=0, node; node = nodes[i++];) {
+    var newHtml = [],
+        line = node.innerHTML,
+        parts = line.split(":in "),
+        pathAndLine = parts[0].split(":");
+    node.innerHTML = ["<a href='txmt://open?url=file://", pathAndLine[0], "&amp;line=", pathAndLine[1], "&amp;column=1'>", line, "</a>"].join('');
   }
 
 }
