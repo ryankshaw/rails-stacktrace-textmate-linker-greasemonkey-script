@@ -1,4 +1,3 @@
-
 // Hello World! example user script
 // version 0.1 BETA!
 // 2005-04-25
@@ -28,17 +27,19 @@
 
 if (nodes = document.getElementById("traces") && document.querySelectorAll("#traces pre>code")) {
   for (var i=0, node; node = nodes[i++];) {
-    var newHtml = [],
-        lines = node.innerHTML.split(/\n/);
-        
-    for (var i=0, line; line = lines[i]; i++){
-      var parts       = line.split(":in "),
-          pathAndLine = parts[0].split(":");    
-      newHtml.push("<a href='txmt://open?url=file://", pathAndLine[0], "&amp;line=", pathAndLine[1], "&amp;column=1'>", line, "</a>\n");
+    if (node.innerHTML.length > 0) {
+      var newHtml = [],
+          lines = node.innerHTML.split(/\n/);
+      for (var i=0, line; line = lines[i]; i++) {
+        var parts       = line.split(":in "),
+            pathAndLine = parts[0].split(":");    
+        newHtml.push("<a href='txmt://open?url=file://", pathAndLine[0], "&amp;line=", pathAndLine[1], "&amp;column=1'>", line, "</a>\n");
+      }
+      node.innerHTML = newHtml.join("");
     }
-    node.innerHTML = newHtml.join("");
   }
 }
+
 // this makes it work with rack_bug
 if (nodes = document.getElementById("rack_bug") && document.querySelectorAll("#rack_bug table>tbody>tr>td[colspan='3'] li")) {
   for (var i=0, node; node = nodes[i++];) {
