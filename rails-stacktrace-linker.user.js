@@ -30,7 +30,7 @@ if (nodes = document.getElementById("traces") && document.querySelectorAll("#tra
     if (node.innerHTML.length > 0) {
       var newHtml = [],
           lines = node.innerHTML.split(/\n/);
-      for (var i=0, line; line = lines[i]; i++) {
+      for (var j=0, line; line = lines[j]; j++) {
         var parts       = line.split(":in "),
             pathAndLine = parts[0].split(":");    
         newHtml.push("<a href='txmt://open?url=file://", pathAndLine[0], "&amp;line=", pathAndLine[1], "&amp;column=1'>", line, "</a>\n");
